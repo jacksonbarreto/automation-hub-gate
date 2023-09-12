@@ -12,6 +12,7 @@ services:
 
   nginxconfigmanager:
     image: jacksonbarreto/automation-hub-nginxconfigmanager:latest
+    restart: always
     volumes:
       - ./nginx-config/sites-enabled:/app/sites-enabled
     networks:
