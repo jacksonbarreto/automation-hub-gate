@@ -14,6 +14,8 @@ services:
   nginxconfigmanager:
     image: jacksonbarreto/automation-hub-nginxconfigmanager:latest
     restart: always
+    env_file:
+      - .env
     volumes:
       - ./nginx-config/sites-enabled:/app/sites-enabled
     networks:
